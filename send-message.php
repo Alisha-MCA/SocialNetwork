@@ -4,7 +4,7 @@ include('./classes/Login.php');
 if (Login::isLoggedIn()) {
         $userid = Login::isLoggedIn();
 } else {
-        die('Not logged in');
+        die('Not logged in..');
 }
 if (isset($_POST['send'])) {
         if (DB::query('SELECT id FROM users WHERE id=:receiver', array(':receiver'=>$_GET['receiver']))) {
